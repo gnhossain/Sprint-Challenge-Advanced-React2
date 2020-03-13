@@ -8,11 +8,16 @@ it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
   ReactDOM.unmountComponentAtNode(div);
+  
 });
 
 it('renders "Players" text', () => {
+  // Arrange
   const wrapper = render(<App />);
+  // Act
   const hasTitleText = wrapper.queryByText(/women's world cup players/i);
+  // Assert
+  expect(wrapper.getByText(/women's world cup players/i));
 });
 
 it('renders "Navbar" text', () => {
