@@ -14,3 +14,13 @@ it('renders "Players" text', () => {
   const wrapper = render(<App />);
   const hasTitleText = wrapper.queryByText(/women's world cup players/i);
 });
+
+it('renders "Navbar" text', () => {
+  const wrapper = render(<App />);
+  const TitleText = wrapper.queryByText(/sprin-advanced react/i);
+});
+
+it('renders "Card" text', () => {
+  const wrapper = render(<App />);
+  const cardTitleText = wrapper.queryByText(/player's name/i);
+});
